@@ -105,6 +105,23 @@
           <text>"yellow"</text>
         </outputEntry>
       </rule>
+      <rule id="DecisionRule_0liay12">
+        <inputEntry id="UnaryTests_1cmcwtb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ff98ze">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06zofas">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bt8s0a">
+          <text>"good"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1nz4u8j">
+          <text>"green"</text>
+        </outputEntry>
+      </rule>
     </decisionTable>
   </decision>
   <dmndi:DMNDI>
