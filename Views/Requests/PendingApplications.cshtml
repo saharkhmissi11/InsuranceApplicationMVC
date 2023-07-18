@@ -1,0 +1,83 @@
+﻿@model IEnumerable<InsuranceApplicationMVC.Models.InsuranceModels.Request>
+
+@{
+    ViewData["Title"] = "PendingApplications";
+}
+
+<h1>PendingApplications</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.carManufacturer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.carType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.riskAssessment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.riskDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.reqResult)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.carManufacturer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.carType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.riskAssessment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.riskDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.reqResult)
+            </td>
+            <td>
+                <a asp-action="DecideAboutApplication" asp-route-id="@item.id">Decide</a> |
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

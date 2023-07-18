@@ -1,0 +1,77 @@
+﻿@model InsuranceApplicationMVC.Models.InsuranceModels.Request
+
+@{
+    ViewData["Title"] = "DecideAboutApplication";
+}
+
+<h1>DecideAboutApplication</h1>
+
+<h4>Request</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DecideAboutApplication">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="id" />
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" readonly="true" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age" class="control-label"></label>
+                <input asp-for="age" class="form-control" readonly="true" />
+                <span asp-validation-for="age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" readonly="true" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="carManufacturer" class="control-label" ></label>
+                <input asp-for="carManufacturer" class="form-control" readonly="true" />
+                <span asp-validation-for="carManufacturer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="carType" class="control-label"></label>
+                <input asp-for="carType" class="form-control" readonly="true" />
+                <span asp-validation-for="carType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="riskAssessment" class="control-label"></label>
+                <input asp-for="riskAssessment" class="form-control" readonly="true" />
+                <span asp-validation-for="riskAssessment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="riskDescription" class="control-label"></label>
+                <input asp-for="riskDescription" class="form-control" readonly="true" />
+                <span asp-validation-for="riskDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="processInstanceId" class="control-label"></label>
+                <input asp-for="processInstanceId" class="form-control" readonly="true" />
+                <span asp-validation-for="processInstanceId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="reqResult" class="control-label"></label>
+                <select asp-for="reqResult" class="form-control" cam-variable-name="decision">
+                    <option>approve</option>
+                    <option>reject</option>
+                </select>
+                <span asp-validation-for="reqResult" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

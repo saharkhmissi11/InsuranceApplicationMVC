@@ -1,0 +1,72 @@
+﻿@model InsuranceApplicationMVC.Models.InsuranceModels.Request
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Apply For Insurance</h1>
+
+<h4>Enter your information</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label"></label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age" class="control-label"></label>
+                <input asp-for="age" class="form-control" />
+                <span asp-validation-for="age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="email" class="control-label"></label>
+                <input asp-for="email" class="form-control" />
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="carManufacturer" class="control-label"></label>
+                <select asp-for="carManufacturer" class="form-control">
+                    <option>BMW</option>
+                    <option>Porsche</option>
+                    <option>VW</option>
+                </select>
+                <span asp-validation-for="carManufacturer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="carType" class="control-label"></label>
+                <select asp-for="carType" class="form-control">
+                    <option>X3</option>
+                    <option>911</option>
+                    <option>Golf 5</option>
+                </select>
+                <span asp-validation-for="carType" class="text-danger"></span>
+            </div>
+
+            <!--<div class="form-group">
+                <label asp-for="riskAssessment" class="control-label"></label>
+                <input asp-for="riskAssessment" class="form-control" />
+                <span asp-validation-for="riskAssessment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="riskDescription" class="control-label"></label>
+                <input asp-for="riskDescription" class="form-control" />
+                <span asp-validation-for="riskDescription" class="text-danger"></span>
+                        </div>-->
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

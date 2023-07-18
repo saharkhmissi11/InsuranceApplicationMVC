@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="Definitions_0d9d9o6" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.12.0">
+  <decision id="riskAssessment" name="Risk Assessment">
+    <decisionTable id="decisionTable" hitPolicy="FIRST">
+      <input id="input1" label="Age">
+        <inputExpression id="inputExpression1" typeRef="integer">
+          <text>age</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0ohc5m6" label="Car Manufacturer">
+        <inputExpression id="LiteralExpression_0o7difo" typeRef="string">
+          <text>carManufacturer</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0pg433y" label="Car Type">
+        <inputExpression id="LiteralExpression_1si98id" typeRef="string">
+          <text>carType</text>
+        </inputExpression>
+      </input>
+      <output id="output1" label="Risk Description" name="description" typeRef="string" />
+      <output id="OutputClause_0hh62nv" label="Risk Assessment" name="assessment" typeRef="string" />
+      <rule id="row-314105272-2">
+        <description>No sorry - that's too risky!</description>
+        <inputEntry id="UnaryTests_0lcjg79">
+          <text>&lt;= 25</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xz8f1w">
+          <text>"Porsche"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_117a7p9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dji0lf">
+          <text>"Young and too fast"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1j2qlq2">
+          <text>"red"</text>
+        </outputEntry>
+      </rule>
+      <rule id="row-314105272-1">
+        <inputEntry id="UnaryTests_1nn7033">
+          <text>&lt;= 21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1qkkerf">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1c2g397">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1mx9cij">
+          <text>"Beginner"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zb455z">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+      <rule id="row-314105272-3">
+        <inputEntry id="UnaryTests_1jfqwhc">
+          <text>&lt;= 30</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08erdz1">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_185ud6j">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1610chu">
+          <text>"Young and fast"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0neqx51">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+      <rule id="row-314105272-4">
+        <inputEntry id="UnaryTests_194oa9u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09y683y">
+          <text>"Porsche"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fsma9e">
+          <text>"911"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wves9k">
+          <text>"Fast and furious"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0cayvqc">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+      <rule id="row-314105272-5">
+        <inputEntry id="UnaryTests_0av35iy">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0683p4l">
+          <text>"BMW"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rmi011">
+          <text>"X3"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1h3sboh">
+          <text>"High value vehicle"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0asc7l5">
+          <text>"yellow"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="DMNDiagram_1rsauko">
+      <dmndi:DMNShape id="DMNShape_0bo8jjj" dmnElementRef="riskAssessment">
+        <dc:Bounds height="80" width="180" x="150" y="80" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
